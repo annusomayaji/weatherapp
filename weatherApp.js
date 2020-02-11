@@ -96,7 +96,7 @@ function getForecast(){
 		const key="b3a62f27b608a0cc3e00e05fb21ed5cd";
 		var cityName=$("#city")[0].value;
 		console.log(cityName);
-		let api=`http://api.openweathermap.org/data/2.5/forecast?q=${cityName}&cnt=7&mode=json&APPID=${key}` ; //requesting weather data from API by passing city name.
+		let api=`https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&cnt=7&mode=json&APPID=${key}` ; //requesting weather data from API by passing city name.
 		console.log(api);
 		fetch(api).then(function(response){
 		var data=response.json();
