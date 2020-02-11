@@ -60,7 +60,7 @@ function getCurrentWeather(){
 			var weathertype=data.weather[0].description;
 			weatherData.description=weathertype.charAt(0).toUpperCase()+weathertype.slice(1); //capitalize first letter of weather description
 			var weatherIcon=data.weather[0].icon;
-			weatherData.icon="http://openweathermap.org/img/w/" + weatherIcon + ".png";
+			weatherData.icon="https://openweathermap.org/img/w/" + weatherIcon + ".png";
 			console.log(weatherData.icon);
 			return 	weatherIcon;		
 		}).then(function(){
@@ -133,7 +133,7 @@ function getForecast(){
 			}
 			forecastTable += "<td>" + Math.round(data.list[i].main.temp-273.15)+ "&deg;C" + "</td>";
 			/*forecastTable += "<td>" + data.list[i].weather[0].icon + "</td>";*/ 
-			forecastTable += "<td>" + '<img src="' +"http://openweathermap.org/img/w/" + data.list[i].weather[0].icon + '.png" />' + "</td>";
+			forecastTable += "<td>" + '<img src="' +"https://openweathermap.org/img/w/" + data.list[i].weather[0].icon + '.png" />' + "</td>";
 			forecastTable += "<td>" + data.list[i].weather[0].description + "</td>";
 			forecastTable += "</tr>";
 			
