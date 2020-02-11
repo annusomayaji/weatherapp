@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>The Weather App</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="style.css"></link>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script  type="text/javascript" src="weatherApp.js"></script>
+
+</head>
+<body>
+	<nav  id="navigationBar" class="navigation">
+			<a class="icon" onclick="expandfunction()"><i class="fa fa-bars"></i></a>
+			<div>
+			<a class="weather" href="index.html"><img src="images/logo.png" id="logo"/> <strong>Weather</strong></a>
+			<a class="forecastWeather"  href="forecast.html">Forecast</a>
+			<a href="index.html" >Today</a>
+			</div>
+	</nav>
+	<div id="container">
+		
+			<div id="input-option">
+				<select id="city" autofocus>
+				<option value="Barking and Dagenham">Barking and Dagenham</option>
+				<option value="Barnet">Barnet</option>
+				<option value="Barnsley">Barnsley</option>
+				<option value="Bath and North East Somerset">Bath and North East Somerset</option>
+				<option value="Bedford">Bedford</option>
+				<option value="Bexley">Bexley</option>
+				<option value="Birmingham">Birmingham</option>
+				<option value="Blackburn with Darwen">Blackburn with Darwen</option>
+				<option value="Blackpool">Blackpool</option>
+				<option value="Bolton">Bolton</option>
+				<option value="Bournemouth">Bournemouth</option>
+				<option value="Bracknell Forest">Bracknell Forest</option>
+				<option value="Bradford">Bradford</option>
+				<option value="Brent">Brent</option>
+				<option value="Brighton and Hove">Brighton and Hove</option>
+				<option value="Bristol, City of">Bristol, City of</option>
+				<option value="Bromley">Bromley</option>
+				<option value="Buckinghamshire">Buckinghamshire</option>
+				<option value="Bury">Bury</option>
+				<option value="Calderdale<">Calderdale</option>
+				<option value="Cambridgeshire">Cambridgeshire</option>
+				<option value="Camden">Camden</option>
+				<option value="Central Bedfordshire">Central Bedfordshire</option>
+				<option value="Cheshire East">Cheshire East</option>
+				<option value="Cheshire West and Chester">Cheshire West and Chester</option>
+				<option value="Cornwall">Cornwall</option>
+				<option value="Coventry">Coventry</option>
+				<option value="Croydon">Croydon</option>
+				<option value="Cumbria">Cumbria</option>
+				<option value="Darlington">Darlington</option>
+				<option value="Derby">Derby</option>
+				<option value="Derbyshire">Derbyshire</option>
+				<option value="Devon">Devon</option>
+				<option value="Doncaster">Doncaster</option>
+				<option value="Dorset">Dorset</option>
+				<option value="Dudley">Dudley</option>
+				<option value="Durham">Durham</option>
+				<option value="Ealing">Ealing</option>
+				<option value="East Riding of Yorkshire">East Riding of Yorkshire</option>
+				<option value="East Sussex">East Sussex</option>
+				<option value="Enfield">Enfield</option>
+				<option value="Essex">Essex</option>
+				<option value="Gateshead">Gateshead</option>
+				<option value="Gloucestershire">Gloucestershire</option>
+				<option value="Greenwich">Greenwich</option>
+				<option value="Hackney">Hackney</option>
+				<option value="Halton">Halton</option>
+				<option value="Hammersmith and Fulham">Hammersmith and Fulham</option>
+				<option value="Hampshire">Hampshire</option>
+				<option value="Haringey">Haringey</option>
+				<option value="Harrow">Harrow</option>
+				<option value="Hartlepool">Hartlepool</option>
+				<option value="Havering">Havering</option>
+				<option value="Herefordshire">Herefordshire</option>
+				<option value="Hertfordshire">Hertfordshire</option>
+				<option value="Hillingdon">Hillingdon</option>
+				<option value="Hounslow">Hounslow</option>
+				<option value="Isle of Wight">Isle of Wight</option>
+				<option value="Isles of Scilly">Isles of Scilly</option>
+				<option value="Islington">Islington</option>
+				<option value="Kensington and Chelsea">Kensington and Chelsea</option>
+				<option value="Kent">Kent</option>
+				<option value="Kingston upon Hull">Kingston upon Hull</option>
+				<option value="Kingston upon Thames">Kingston upon Thames</option>
+				<option value="Kirklees">Kirklees</option>
+				<option value="Knowsley">Knowsley</option>
+				<option value="Lambeth">Lambeth</option>
+				<option value="Lancashire">Lancashire</option>
+				<option value="Leeds">Leeds</option>
+				<option value="Leicester">Leicester</option>
+				<option value="Leicestershire">Leicestershire</option>
+				<option value="Lewisham">Lewisham</option>
+				<option value="Lincolnshire">Lincolnshire</option>
+				<option value="Liverpool">Liverpool</option>
+				<option value="London, City of">London, City of</option>
+				<option value="Luton">Luton</option>
+				<option value="Manchester">Manchester</option>
+				<option value="Medway">Medway</option>
+				<option value="Merton">Merton</option>
+				<option value="Middlesbrough">Middlesbrough</option>
+				<option value="Milton Keynes">Milton Keynes</option>
+				<option value="Newcastle upon Tyne">Newcastle upon Tyne</option>
+				<option value="Newham">Newham</option>
+				<option value="Norfolk">Norfolk</option>
+				<option value="North East Lincolnshire">North East Lincolnshire</option>
+				<option value="North Lincolnshire">North Lincolnshire</option>
+				<option value="North Somerset">North Somerset</option>
+				<option value="North Tyneside">North Tyneside</option>
+				<option value="North Yorkshire">North Yorkshire</option>
+				<option value="Northamptonshire">Northamptonshire</option>
+				<option value="Northumberland">Northumberland</option>
+				<option value="Nottingham">Nottingham</option>
+				<option value="Nottinghamshire">Nottinghamshire</option>
+				<option value="Oldham">Oldham</option>
+				<option value="Oxfordshire">Oxfordshire</option>
+				<option value="Peterborough">Peterborough</option>
+				<option value="Plymouth">Plymouth</option>
+				<option value="Poole">Poole</option>
+				<option value="Portsmouth">Portsmouth</option>
+				<option value="Reading">Reading</option>
+				<option value="Redbridge">Redbridge</option>
+				<option value="Redcar and Cleveland">Redcar and Cleveland</option>
+				<option value="Richmond upon Thames">Richmond upon Thames</option>
+				<option value="Rochdale">Rochdale</option>
+				<option value="Rotherham">Rotherham</option>
+				<option value="Rutland">Rutland</option>
+				<option value="Salford">Salford</option>
+				<option value="Sandwell">Sandwell</option>
+				<option value="Sefton">Sefton</option>
+				<option value="Sheffield">Sheffield</option>
+				<option value="Shropshire">Shropshire</option>
+				<option value="Slough">Slough</option>
+				<option value="Solihull">Solihull</option>
+				<option value="Somerset">Somerset</option>
+				<option value="South Gloucestershire">South Gloucestershire</option>
+				<option value="South Tyneside">South Tyneside</option>
+				<option value="Southampton">Southampton</option>
+				<option value="Southend-on-Sea">Southend-on-Sea</option>
+				<option value="Southwark">Southwark</option>
+				<option value="St. Helens">St. Helens</option>
+				<option value="Staffordshire">Staffordshire</option>
+				<option value="Stockport">Stockport</option>
+				<option value="Stockton-on-Tees">Stockton-on-Tees</option>
+				<option value="Stoke-on-Trent">Stoke-on-Trent</option>
+				<option value="Suffolk">Suffolk</option>
+				<option value="Sunderland">Sunderland</option>
+				<option value="Surrey">Surrey</option>
+				<option value="Sutton">Sutton</option>
+				<option value="Swindon">Swindon</option>
+				<option value="Tameside">Tameside</option>
+				<option value="Telford and Wrekin">Telford and Wrekin</option>
+				<option value="Thurrock">Thurrock</option>
+				<option value="Torbay">Torbay</option>
+				<option value="Tower Hamlets">Tower Hamlets</option>
+				<option value="Trafford">Trafford</option>
+				<option value="Wakefield">Wakefield</option>
+				<option value="Walsall">Walsall</option>
+				<option value="Waltham Forest">Waltham Forest</option>
+				<option value="Wandsworth">Wandsworth</option>
+				<option value="Warrington">Warrington</option>
+				<option value="Warwickshire">Warwickshire</option>
+				<option value="West Berkshire">West Berkshire</option>
+				<option value="West Sussex">West Sussex</option>
+				<option value="Westminster">Westminster</option>
+				<option value="Wigan">Wigan</option>
+				<option value="Wiltshire">Wiltshire</option>
+				<option value="Windsor and Maidenhead">Windsor and Maidenhead</option>
+				<option value="Wirral">Wirral</option>
+				<option value="Wokingham">Wokingham</option>
+				<option value="Wolverhampton">Wolverhampton</option>
+				<option value="Worcestershire">Worcestershire</option>
+				<option value="York">York</option>			
+				</select>
+				<button type="button" id="submit" onclick="getForecast()">Get forecast
+				</button>
+			
+			
+			</div>
+		<div class="inside-container">
+			<table id="forecast-table">
+				<tbody id="forecast-data">
+				</tbody>
+			</table>
+		</div>	
+	</div>
+<footer>
+	<div id="foot"><p class="left"> copyright &copy; Annapoorna Somayaji</p><p class="right"><a href="https://openweathermap.org/" target="_blank">Powered by Open Weather</a></p></div>
+</footer>
+	
+	
+</body>
+</html>
